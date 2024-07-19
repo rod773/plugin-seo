@@ -2,9 +2,9 @@
 /*
 Plugin Name: Plugin Seo
 Plugin URI: 
-Description: 
+Description: Optimización Seo
 Version: 
-Author: 
+Author: Rodrigo
 Author URI: 
 License: 
 License URI: 
