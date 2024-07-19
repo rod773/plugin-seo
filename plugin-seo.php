@@ -78,6 +78,35 @@ const title = document.querySelector('title');
 
 title.innerHTML += content;
 
+
+const meta1 = document.createElement('meta');
+meta1.property = 'og:title';
+meta1.content = 'Afa Levante Tienda';
+document.getElementsByTagName('head')[0].appendChild(meta1);
+
+const meta2 = document.createElement('meta');
+meta2.property = 'og:type';
+meta2.content = 'Productos para ayudar enfermos con demencia Alzheimer';
+document.getElementsByTagName('head')[0].appendChild(meta2);
+
+const meta3 = document.createElement('meta');
+meta3.property = 'og:url';
+meta3.content = 'https://infodemencias.com/donaciones';
+document.getElementsByTagName('head')[0].appendChild(meta3);
+
+const meta4 = document.createElement('meta');
+meta4.property = 'og:image';
+meta4.content =
+  'https://infodemencias.com/wp-content/uploads/2024/06/donaciones.png';
+document.getElementsByTagName('head')[0].appendChild(meta4);
+
+const meta5 = document.createElement('meta');
+meta5.property = 'og:description';
+meta5.content = content;
+document.getElementsByTagName('head')[0].appendChild(meta5);
+
+
+
 </script>";
 
 	
