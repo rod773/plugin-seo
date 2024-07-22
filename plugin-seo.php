@@ -19,7 +19,7 @@ include_once('content.php');
 
 /* Add CSS file */
 
-add_action('admin_enqueue_scripts', 'pluginseo_admin_page_styles');
+add_action('admin_enqueue_scripts', 'pluginseo_settings_page_styles');
 
 add_action('wp_enqueue_scripts','loadseo');
 
