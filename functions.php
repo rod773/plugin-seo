@@ -2,8 +2,6 @@
 
 function loadseo(){
 
-
-
 $text1 = 'Bienvenidos a nuestra tienda solidaria, un espacio dedicado a recaudar fondos para ayudar a las personas que viven con demencia, incluyendo el Alzheimer. Nuestra misión es proporcionar apoyo y recursos a quienes más lo necesitan, y cada compra que realizas nos acerca un paso más a lograr este objetivo.';
 
 $text2 = 'En nuestra tienda, encontrarás una variedad de productos cuidadosamente seleccionados, desde artículos de uso diario hasta regalos únicos y especiales. Cada producto ha sido elegido no solo por su calidad y utilidad, sino también por su capacidad para generar un impacto positivo en la vida de las personas afectadas por la demencia. Al adquirir nuestros productos, no solo estás obteniendo algo valioso para ti o tus seres queridos, sino que también estás contribuyendo directamente a una causa noble y urgente.';
