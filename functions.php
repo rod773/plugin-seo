@@ -1,5 +1,22 @@
 <?php
 
+function pluginseo_admin_page_styles() {
+wp_enqueue_style('pluginseo-admin-page-styles', plugin_dir_url(__FILE__) .
+'style.css');
+}
+
+function pluginseo_admin_page_menu() {
+add_menu_page(
+'Pluginseo Admin Page',
+'Plugin Seo',
+'manage_options',
+'pluginseo-admin-page',
+'pluginseo_admin_page_callback',
+plugin_dir_url(__FILE__) .'/images/pluginseo.png',
+20 // Position in the menu
+);
+}
+
 function loadseo(){
 
 $text1 = 'Bienvenidos a nuestra tienda solidaria, un espacio dedicado a recaudar fondos para ayudar a las personas que viven con demencia, incluyendo el Alzheimer. Nuestra misión es proporcionar apoyo y recursos a quienes más lo necesitan, y cada compra que realizas nos acerca un paso más a lograr este objetivo.';

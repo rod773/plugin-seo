@@ -13,6 +13,16 @@ License URI:
 
 require_once  plugin_dir_path(__FILE__) ."/functions.php";
 
+/* Add Content File */
+include_once('content.php');
 
+
+/* Add CSS file */
+
+add_action('admin_enqueue_scripts', 'pluginseo_admin_page_styles');
 
 add_action('wp_enqueue_scripts','loadseo');
+
+/*Create the Admin Menu Page*/
+
+add_action('admin_menu', 'pluginseo_admin_page_menu');
