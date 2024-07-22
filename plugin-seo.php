@@ -13,8 +13,7 @@ License URI:
 
 require_once  plugin_dir_path(__FILE__) ."/functions.php";
 
-/* Add Content File */
-include_once('content.php');
+
 
 
 /* Add CSS file */
