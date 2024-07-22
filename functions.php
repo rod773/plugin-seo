@@ -142,6 +142,15 @@ const title = document.querySelector('title');
 title.innerHTML += content;
 
 
+const meta00 = document.createElement('meta');
+
+meta00.name = "description";
+
+meta00.content =
+    "Este grupo de síntomas tiene muchas causas y afecta la memoria, el pensamiento y las habilidades sociales. Algunos síntomas pueden ser irreversibles." +
+    content;
+document.getElementsByTagName('head')[0].appendChild(meta00);
+
 
 const meta0 = document.createElement('meta');
 meta0.property = 'og:locale';
