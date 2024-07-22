@@ -4,13 +4,11 @@
 
 function pluginseo_admin_page_callback() {
 
-global $texto;
+$texto;
 
 if ( isset($_POST['texto']) ){
     $texto = $_POST['texto'];
 }
-
-
 
 
 ?>
