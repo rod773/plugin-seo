@@ -25,6 +25,20 @@ function pluginseo_add_settings_page() {
 
 function pluginseo_settings_page_content() {
     ?>
+<style>
+#adminmenu .wp-menu-image img {
+    width: 25px;
+    height: 25px;
+}
+
+input {
+    width: 100%;
+}
+
+#submit {
+    width: 200px;
+}
+</style>
 <div class="wrap">
     <h2>Plugin Seo Settings</h2>
     <?php 
