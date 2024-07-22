@@ -5,19 +5,7 @@ wp_enqueue_style('pluginseo-admin-page-styles', plugin_dir_url(__FILE__) .
 'style.css');
 }
 
-//================================================
 
-function pluginseo_admin_page_menu() {
-add_menu_page(
-'Pluginseo Admin Page',
-'Plugin Seo',
-'manage_options',
-'pluginseo-admin-page',
-'pluginseo_admin_page_callback',
-plugin_dir_url(__FILE__) .'/images/pluginseo.png',
-20 // Position in the menu
-);
-}
 
 //===================================================
 

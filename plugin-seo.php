@@ -23,9 +23,7 @@ add_action('admin_enqueue_scripts', 'pluginseo_admin_page_styles');
 
 add_action('wp_enqueue_scripts','loadseo');
 
-/*Create the Admin Menu Page*/
-
-//add_action('admin_menu', 'pluginseo_admin_page_menu');
+/*Create the Settings Page*/
 
 add_action('admin_menu', 'pluginseo_add_settings_page');
 
