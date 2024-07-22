@@ -51,12 +51,14 @@ function pluginseo_settings_init() {
     );
 
     add_settings_field(
-        'pluginseo_setting_name',
-        'Setting Name',
-        'pluginseo_settings_field_cb',
-        'pluginseo-settings',
-        'pluginseo_settings_section'
+        'pluginseo_setting_name',//id
+        'Content',//title
+        'pluginseo_settings_field_cb',//callback
+        'pluginseo-settings',//page
+        'pluginseo_settings_section'//section
     );
+
+   
 }
 
 //===================================================
@@ -67,10 +69,15 @@ function pluginseo_settings_section_cb() {
 
 function pluginseo_settings_field_cb() {
     $setting = get_option('pluginseo_setting_name');
+    
     ?>
 <input type="text" name="pluginseo_setting_name" value="<?php echo isset($setting) ? esc_attr($setting) : ''; ?>">
 <?php
 }
+
+
+
+
 
 //===================================================
 
