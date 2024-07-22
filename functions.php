@@ -39,6 +39,8 @@ input {
     width: 200px;
 }
 </style>
+
+
 <div class="wrap">
     <h2>Plugin Seo Settings</h2>
     <?php 
