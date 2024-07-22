@@ -1,9 +1,5 @@
 <?php
 
-
-
-
-
 function loadseo(){
 
 
@@ -30,46 +26,45 @@ $text8 = 'La demencia es un término general que abarca una variedad de afeccion
 
  $text10 = 'La demencia es un término general que describe una variedad de síntomas asociados con el deterioro de la memoria, el pensamiento y las habilidades sociales. Aquí tienes un resumen de los síntomas y causas más comunes:';
 
- $text11 = 'Síntomas de la DemenciaPérdida de memoria: Generalmente notada por otras personas, afecta la capacidad de recordar información reciente1.Dificultades para comunicarse: Problemas para encontrar las palabras adecuadas o seguir conversaciones1.Dificultades visuales y espaciales: Perderse en lugares conocidos o dificultad para reconocer caras y objetos1.Problemas de razonamiento y juicio: Dificultad para tomar decisiones o resolver problemas1.Dificultad para realizar tareas complejas: Problemas para planificar y llevar a cabo actividades que requieren múltiples pasos1.Causas de la Demencia';
+ $text11 = 'Síntomas de la Demencia Pérdida de memoria: Generalmente notada por otras personas, afecta la capacidad de recordar información reciente1.Dificultades para comunicarse: Problemas para encontrar las palabras adecuadas o seguir conversaciones1.Dificultades visuales y espaciales: Perderse en lugares conocidos o dificultad para reconocer caras y objetos1.Problemas de razonamiento y juicio: Dificultad para tomar decisiones o resolver problemas1.Dificultad para realizar tareas complejas: Problemas para planificar y llevar a cabo actividades que requieren múltiples pasos1.Causas de la Demencia';
 
 
- $text12 =  'Enfermedad de Alzheimer: La causa más común de demencia, caracterizada por la acumulación de placas y ovillos en el cerebro que llevan a la muerte de las neuronas2.Demencia vascular: Causada por daños en los vasos sanguíneos del cerebro, a menudo después de un derrame cerebral3.Demencia con cuerpos de Lewy: Asociada con depósitos anormales de proteínas en el cerebro3.Demencia frontotemporal: Resulta de la degeneración de las células nerviosas en los lóbulos frontal y temporal del cerebro3.Demencias secundarias: Provocadas por otras condiciones médicas como infecciones, enfermedades autoinmunes, o deficiencias nutricionales3.Cada tipo de demencia tiene sus propias características y evolución, por lo que es importante un diagnóstico preciso para un tratamiento adecuado.';
 
-	
-echo "<script>
 
+  ?>
+<script>
 const meta = document.createElement('meta');
 
-const text1 = '$text1';
-const text2 = '$text2';
-const text3 = '$text3';
-const text4 = '$text4';
-const text5 = '$text5';
-const text6 = '$text6';
-const text7 = '$text7';
-const text8 = '$text8';
-const text9 = '$text9';
-const text10 = '$text10';
-const text11 = '$text11';
-const text12 = '$text12';
- 
+const text1 = "<?php echo $text1; ?>";
+const text2 = "<?php echo $text2; ?>";
+const text3 = "<?php echo $text3; ?>";
+const text4 = "<?php echo $text4; ?>";
+const text5 = "<?php echo $text5; ?>";
+const text6 = "<?php echo $text6; ?>";
+const text7 = "<?php echo $text7; ?>";
+const text8 = "<?php echo $text8; ?>";
+const text9 = "<?php echo $text9; ?>";
+const text10 = "<?php echo $text10; ?>";
+const text11 = "<?php echo $text11; ?>";
 
 
-const content =  text1 +
-  text2 +
-  text3 +
-  text4 +
-  text5 +
-  text6 +
-  text7 +
-  text8 +
-  text9 +
-  text10 +
-  text11 +
-  text12;
+
+
+const content = text1 +
+    text2 +
+    text3 +
+    text4 +
+    text5 +
+    text6 +
+    text7 +
+    text8 +
+    text9 +
+    text10 +
+    text11
+
 
 meta.content = content;
- 
+
 document.getElementsByTagName('head')[0].appendChild(meta);
 
 const title = document.querySelector('title');
@@ -102,7 +97,7 @@ document.getElementsByTagName('head')[0].appendChild(meta3);
 const meta4 = document.createElement('meta');
 meta4.property = 'og:image';
 meta4.content =
-  'https://infodemencias.com/wp-content/uploads/2024/06/donaciones.png';
+    'https://infodemencias.com/wp-content/uploads/2024/06/donaciones.png';
 document.getElementsByTagName('head')[0].appendChild(meta4);
 
 const meta5 = document.createElement('meta');
@@ -111,10 +106,9 @@ meta5.content = content;
 document.getElementsByTagName('head')[0].appendChild(meta5);
 
 console.log(meta0);
+</script>
 
-</script>";
-
-	
+<?php
 
 	
 }
