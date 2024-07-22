@@ -51,17 +51,9 @@ function pluginseo_settings_init() {
     );
 
     add_settings_field(
-        'pluginseo_title',
-        'Title',
-        'pluginseo_title_cb',
-        'pluginseo-settings',
-        'pluginseo_settings_section'
-    );
-
-     add_settings_field(
-        'pluginseo_content',
-        'Content',
-        'pluginseo_content_cb',
+        'pluginseo_setting_name',
+        'Setting Name',
+        'pluginseo_settings_field_cb',
         'pluginseo-settings',
         'pluginseo_settings_section'
     );
@@ -73,17 +65,10 @@ function pluginseo_settings_section_cb() {
     echo '<p>Intro text for our settings section</p>';
 }
 
-function pluginseo_title_cb() {
-    $setting = get_option('pluginseo_title');
+function pluginseo_settings_field_cb() {
+    $setting = get_option('pluginseo_setting_name');
     ?>
-<input type="text" name="pluginseo_title" value="<?php echo isset($setting) ? esc_attr($setting) : ''; ?>">
-<?php
-}
-
-function pluginseo_content_cb() {
-    $setting = get_option('pluginseo_content');
-    ?>
-<input type="text" name="pluginseo_title" value="<?php echo isset($setting) ? esc_attr($setting) : ''; ?>">
+<input type="text" name="pluginseo_setting_name" value="<?php echo isset($setting) ? esc_attr($setting) : ''; ?>">
 <?php
 }
 

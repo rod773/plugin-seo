@@ -2,3 +2,11 @@
   width: 25px;
   height: 25px;
 }
+
+input {
+  width: 100%;
+}
+
+#submit {
+  width: 200px;
+}
