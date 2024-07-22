@@ -26,7 +26,7 @@ function pluginseo_add_settings_page() {
 function pluginseo_settings_page_content() {
     ?>
 <div class="wrap">
-    <h2>My Plugin Settings</h2>
+    <h2>Plugin Seo Settings</h2>
     <form action="options.php" method="post">
         <?php
             settings_fields('pluginseo-settings');
