@@ -1,11 +1,11 @@
 <?php
 
-
-
 function pluginseo_admin_page_styles() {
 wp_enqueue_style('pluginseo-admin-page-styles', plugin_dir_url(__FILE__) .
 'style.css');
 }
+
+//================================================
 
 function pluginseo_admin_page_menu() {
 add_menu_page(
@@ -18,6 +18,73 @@ plugin_dir_url(__FILE__) .'/images/pluginseo.png',
 20 // Position in the menu
 );
 }
+
+//===================================================
+
+function pluginseo_add_settings_page() {
+    add_menu_page(
+        'Plugin Seo Settings',
+        'Plugin Seo',
+        'manage_options',
+        'pluginseo-settings',
+        'pluginseo_settings_page_content',
+        plugin_dir_url(__FILE__) .'/images/pluginseo.png',
+        20 // Position in the menu 
+    );
+}
+
+
+
+function pluginseo_settings_page_content() {
+    ?>
+<div class="wrap">
+    <h2>My Plugin Settings</h2>
+    <form action="options.php" method="post">
+        <?php
+            settings_fields('pluginseo-settings');
+            do_settings_sections('pluginseo-settings');
+            submit_button();
+            ?>
+    </form>
+</div>
+<?php
+}
+
+
+
+function pluginseo_settings_init() {
+    register_setting('pluginseo-settings', 'pluginseo_setting_name');
+
+    add_settings_section(
+        'pluginseo_settings_section',
+        'Plugin Seo Settings Section',
+        'pluginseo_settings_section_cb',
+        'pluginseo-settings'
+    );
+
+    add_settings_field(
+        'pluginseo_setting_name',
+        'Setting Name',
+        'pluginseo_settings_field_cb',
+        'pluginseo-settings',
+        'pluginseo_settings_section'
+    );
+}
+
+//===================================================
+
+function pluginseo_settings_section_cb() {
+    echo '<p>Intro text for our settings section</p>';
+}
+
+function pluginseo_settings_field_cb() {
+    $setting = get_option('pluginseo_setting_name');
+    ?>
+<input type="text" name="pluginseo_setting_name" value="<?php echo isset($setting) ? esc_attr($setting) : ''; ?>">
+<?php
+}
+
+//===================================================
 
 function loadseo(){
 
