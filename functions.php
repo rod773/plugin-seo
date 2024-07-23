@@ -16,8 +16,7 @@ function pluginseo_add_settings_page() {
         'manage_options',
         'pluginseo-settings',
         'pluginseo_settings_page_content',
-        //plugin_dir_url(__FILE__) .'/images/pluginseo.png',
-        'dashicons-search',
+         'dashicons-search',
         20 // Position in the menu 
     );
 }
