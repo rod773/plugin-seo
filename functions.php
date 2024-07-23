@@ -46,14 +46,20 @@ input {
     <?php 
     
      
-     $setting = get_option('pluginseo_setting_name');
+     $title = get_option('pluginseo_setting_title');
+
+     $content = get_option('pluginseo_setting_content');
 
 
     ?>
 
+    <h2>Title :</h2>
+
+    <p><?php echo $title;  ?></p>
+
     <h2>Content :</h2>
 
-    <p><?php echo $setting;  ?></p>
+    <p><?php echo $content;  ?></p>
 
     <form action="options.php" method="post">
         <?php
@@ -69,7 +75,10 @@ input {
 
 
 function pluginseo_settings_init() {
-    register_setting('pluginseo-settings', 'pluginseo_setting_name');
+
+    register_setting('pluginseo-settings', 'pluginseo_setting_title');
+    register_setting('pluginseo-settings', 'pluginseo_setting_content');
+    
 
     add_settings_section(
         'pluginseo_settings_section',
@@ -78,13 +87,23 @@ function pluginseo_settings_init() {
         'pluginseo-settings'
     );
 
-    add_settings_field(
-        'pluginseo_setting_name',//id
-        'Content',//title
-        'pluginseo_settings_field_cb',//callback
+     add_settings_field(
+        'pluginseo_setting_title',//id
+        'Title',//title
+        'pluginseo_settings_title_cb',//callback
         'pluginseo-settings',//page
         'pluginseo_settings_section'//section
     );
+
+    add_settings_field(
+        'pluginseo_setting_content',//id
+        'Content',//title
+        'pluginseo_settings_content_cb',//callback
+        'pluginseo-settings',//page
+        'pluginseo_settings_section'//section
+    );
+
+   
 
    
 }
@@ -92,14 +111,22 @@ function pluginseo_settings_init() {
 //===================================================
 
 function pluginseo_settings_section_cb() {
-    echo '<p>Intro text for our settings section</p>';
+    echo '<h3>Introduce los valores</h3>';
 }
 
-function pluginseo_settings_field_cb() {
-    $setting = get_option('pluginseo_setting_name');
+function pluginseo_settings_title_cb() {
+    $title = get_option('pluginseo_setting_title');
     
     ?>
-<input type="text" name="pluginseo_setting_name" value="<?php echo isset($setting) ? esc_attr($setting) : ''; ?>">
+<input type="text" name="pluginseo_setting_title" value="<?php echo isset($title) ? esc_attr($title) : ''; ?>">
+<?php
+}
+
+function pluginseo_settings_content_cb() {
+    $content = get_option('pluginseo_setting_content');
+    
+    ?>
+<input type="text" name="pluginseo_setting_content" value="<?php echo isset($content) ? esc_attr($content) : ''; ?>">
 <?php
 }
 
