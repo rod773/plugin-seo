@@ -118,7 +118,8 @@ function pluginseo_settings_title_cb() {
     $title = get_option('pluginseo_setting_title');
     
     ?>
-<input type="text" name="pluginseo_setting_title" value="<?php echo isset($title) ? esc_attr($title) : ''; ?>">
+<input type="text" id="pluginseo_setting_title" name="pluginseo_setting_title"
+    value="<?php echo isset($title) ? esc_attr($title) : ''; ?>">
 <?php
 }
 
@@ -126,7 +127,8 @@ function pluginseo_settings_content_cb() {
     $content = get_option('pluginseo_setting_content');
     
     ?>
-<input type="text" name="pluginseo_setting_content" value="<?php echo isset($content) ? esc_attr($content) : ''; ?>">
+<input type="text" id="pluginseo_setting_content" name="pluginseo_setting_content"
+    value="<?php echo isset($content) ? esc_attr($content) : ''; ?>">
 <?php
 }
 
