@@ -209,6 +209,17 @@ const meta5 = document.createElement('meta');
 meta5.property = 'og:description';
 meta5.content = content;
 document.getElementsByTagName('head')[0].appendChild(meta5);
+
+
+const head = document.querySelector('head');
+
+const meta_0 = document.createElement('meta');
+
+meta_0.setAttribute('property', 'og:description');
+
+meta_0.setAttribute('content', content);
+
+head.prepend(meta_0)
 </script>
 
 <?php
