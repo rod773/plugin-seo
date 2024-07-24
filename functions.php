@@ -157,7 +157,6 @@ const content = "<?php echo $content; ?>";
 
 const titleText = "<?php echo $title; ?>";
 
-
 meta.content = content;
 
 document.getElementsByTagName('head')[0].appendChild(meta);
@@ -165,7 +164,7 @@ document.getElementsByTagName('head')[0].appendChild(meta);
 const title = document.querySelector('title');
 
 
-title.innerHTML += (titleText + content);
+title.innerText += (titleText + content);
 
 
 const meta00 = document.createElement('meta');
@@ -208,8 +207,6 @@ const meta5 = document.createElement('meta');
 meta5.property = 'og:description';
 meta5.content = content;
 document.getElementsByTagName('head')[0].appendChild(meta5);
-
-console.log(meta0);
 </script>
 
 <?php
