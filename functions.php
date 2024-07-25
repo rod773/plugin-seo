@@ -170,7 +170,13 @@ var title;
 
 if (document.querySelector('title')) {
     title = document.querySelector('title');
-} else title = document.createElement('title');
+} else {
+
+    title = document.createElement('title');
+
+    document.getElementsByTagName('head')[0].appendChild(title);
+
+}
 
 
 
