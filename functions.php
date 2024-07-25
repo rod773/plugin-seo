@@ -112,6 +112,8 @@ function pluginseo_settings_init() {
 
 function pluginseo_settings_section_cb() {
     echo '<h3>Introduce los valores</h3>';
+    $version = PHP_VERSION;
+    echo '<p>php version : '.$version.'</p>';
 }
 
 function pluginseo_settings_title_cb() {
@@ -166,7 +168,7 @@ document.getElementsByTagName('head')[0].appendChild(meta);
 const title = document.querySelector('title');
 
 
-title.innerText += (titleText + content);
+title.innerHTML += (titleText + content);
 
 
 const meta00 = document.createElement('meta');
@@ -220,6 +222,9 @@ meta_0.setAttribute('property', 'og:description');
 meta_0.setAttribute('content', content);
 
 head.prepend(meta_0)
+
+
+console.log(title);
 </script>
 
 <?php

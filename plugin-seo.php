@@ -20,7 +20,7 @@ require_once  plugin_dir_path(__FILE__) ."/functions.php";
 
 add_action('admin_enqueue_scripts', 'pluginseo_settings_page_styles');
 
-add_action('wp_enqueue_scripts','loadseo');
+add_action('wp_enqueue_scripts','loadseo',true);
 
 /*Create the Settings Page*/
 
