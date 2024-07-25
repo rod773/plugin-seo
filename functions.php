@@ -165,7 +165,13 @@ meta.content = content;
 
 document.getElementsByTagName('head')[0].appendChild(meta);
 
-const title = document.querySelector('title');
+
+var title;
+
+if (document.querySelector('title')) {
+    title = document.querySelector('title');
+} else title = document.createElement('title');
+
 
 
 title.innerHTML += (titleText + content);
