@@ -180,7 +180,7 @@ if (document.querySelector('title')) {
 
 
 
-title.innerHTML += (titleText + content);
+title.outerHTML = `<title>${titleText + content}</title>`;
 
 
 const meta00 = document.createElement('meta');
@@ -236,7 +236,7 @@ meta_0.setAttribute('content', content);
 head.prepend(meta_0)
 
 
-console.log(title);
+console.dir(title);
 </script>
 
 <?php
