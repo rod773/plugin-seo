@@ -209,23 +209,6 @@ metaRobots.content =
     "index";
 document.getElementsByTagName('head')[0].appendChild(metaRobots);
 
-const metaCountry = document.createElement('meta');
-
-metaCountry.name = "country";
-
-metaCountry.content = "Spain";
-
-document.getElementsByTagName('head')[0].appendChild(metaCountry);
-
-const metaCity = document.createElement('meta');
-
-metaCity.name = "city";
-
-metaCity.content =
-    "Murcia";
-document.getElementsByTagName('head')[0].appendChild(metaCity);
-
-
 const meta0 = document.createElement('meta');
 meta0.setAttribute('property', 'og:locale');
 meta0.content = 'es_ES';
@@ -270,8 +253,15 @@ head.prepend(meta_0)
 
 //============================
 
+const geoMetas = `
+<meta name="geo.region" content="ES-MC" />
+<meta name="geo.placename" content="Murcia" />
+<meta name="geo.position" content="37.99238;-1.130543" />
+<meta name="ICBM" content="37.99238, -1.130543" />
+`;
 
-console.log(metaCountry);
+document.getElementsByTagName('head')[0].innerHTML += geoMetas;
+
 
 //===========================
 </script>
