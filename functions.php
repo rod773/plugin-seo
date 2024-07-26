@@ -178,9 +178,11 @@ if (document.querySelector('title')) {
 
 }
 
+document.getElementsByTagName('head')[0].innerHTML =
+    `<title>${titleText + content}</title>` +
+    document.getElementsByTagName('head')[0].innerHTML;
 
 
-title.outerHTML = `<title>${titleText + content}</title>`;
 
 
 const meta00 = document.createElement('meta');
