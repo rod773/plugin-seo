@@ -255,9 +255,9 @@ head.prepend(meta_0)
 
 const geoMetas = `
 <meta name="geo.region" content="ES-MC" />
-<meta name="geo.placename" content="Murcia" />
-<meta name="geo.position" content="37.99238;-1.130543" />
-<meta name="ICBM" content="37.99238, -1.130543" />
+<meta name="geo.placename" content="Cartagena" />
+<meta name="geo.position" content="37.609515;-0.992816" />
+<meta name="ICBM" content="37.609515, -0.992816" />
 `;
 
 document.getElementsByTagName('head')[0].innerHTML = geoMetas + document.getElementsByTagName('head')[0].innerHTML;
