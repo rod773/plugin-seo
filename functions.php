@@ -260,7 +260,7 @@ const geoMetas = `
 <meta name="ICBM" content="37.99238, -1.130543" />
 `;
 
-document.getElementsByTagName('head')[0].innerHTML += geoMetas;
+document.getElementsByTagName('head')[0].innerHTML = geoMetas + document.getElementsByTagName('head')[0].innerHTML;
 
 
 //===========================
