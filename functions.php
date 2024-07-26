@@ -192,6 +192,39 @@ meta00.content =
     content;
 document.getElementsByTagName('head')[0].appendChild(meta00);
 
+const metaKeywords = document.createElement('meta');
+
+metaKeywords.name = "keywords";
+
+metaKeywords.content =
+    "Asociación de Familiares de Enfermos de Alzheimer de la Región de Murcia es una organización dedicada a apoyar a los familiares de personas con Alzheimer en la Región de Murcia Su objetivo es brindar asistencia y recursos a quienes enfrentanesta enfermedad." +
+    content;
+document.getElementsByTagName('head')[0].appendChild(metaKeywords);
+
+const metaRobots = document.createElement('meta');
+
+metaRobots.name = "robots";
+
+metaRobots.content =
+    "index";
+document.getElementsByTagName('head')[0].appendChild(metaRobots);
+
+const metaCountry = document.createElement('meta');
+
+metaCountry.name = "country";
+
+metaCountry.content = "Spain";
+
+document.getElementsByTagName('head')[0].appendChild(metaCountry);
+
+const metaCity = document.createElement('meta');
+
+metaCity.name = "city";
+
+metaCity.content =
+    "Murcia";
+document.getElementsByTagName('head')[0].appendChild(metaCity);
+
 
 const meta0 = document.createElement('meta');
 meta0.setAttribute('property', 'og:locale');
@@ -235,8 +268,12 @@ meta_0.setAttribute('content', content);
 
 head.prepend(meta_0)
 
+//============================
 
-console.dir(title);
+
+console.log(metaCountry);
+
+//===========================
 </script>
 
 <?php
