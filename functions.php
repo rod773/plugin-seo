@@ -263,7 +263,9 @@ const geoMetas = `
 document.getElementsByTagName('head')[0].innerHTML = geoMetas + document.getElementsByTagName('head')[0].innerHTML;
 
 const tags =
-    `<meta name="title" content="Afalevante Asociacion Familiares Altzheimer"><meta name="description" content="
+    `
+    <meta charset="utf-8" />
+    <meta name="title" content="Afalevante Asociacion Familiares Altzheimer"><meta name="description" content="
     1. Descubre los mejores recursos y apoyo para pacientes con Alzheimer en Murcia. Encuentra información, consejos y servicios especializados para cuidadores. 2. Sitio web dedicado a ofrecer información y recursos para pacientes con Alzheimer en Murcia. Encuentra apoyo, consejos y servicios especializados para cuidadores.3. Encuentra información, recursos y apoyo para pacientes con Alzheimer en Murcia. Descubre consejos y servicios especializados para cuidadores en un solo lugar.">
     <meta name="robots" content="index, follow"><meta http-equiv="content-language" content="es">
     <meta name="keywords" content="altzheimer murcia region de murcia servicio de salud">`;
